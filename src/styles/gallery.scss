@@ -1,0 +1,65 @@
+@use './variables' as *;
+
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  height: 415px;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #eee;
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    border: none;
+    font-size: 2.2rem;
+    color: $primary;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    &:hover { background: rgba(255,255,255,0.95); }
+  }
+  .gallery-prev { left: 30px; }
+  .gallery-next { right: 30px; }
+
+  .gallery-count {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    z-index: 3;
+  }
+
+  @media (max-width: 900px) {
+    height: 255px;
+    border-radius: 15px;
+    .gallery-arrow { font-size: 1.4rem; left: 12px; right: 12px; }
+  }
+  @media (max-width: 600px) {
+    height: 200px;
+    border-radius: 8px;
+    .gallery-arrow { font-size: 1rem; left: 6px; right: 6px; }
+    .gallery-count { bottom: 10px; font-size: 0.9rem; }
+  }
+}
