@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../data/accommodations.json";
 import Collapse from "../components/Collapse";
 import Gallery from "../components/Gallery";
@@ -11,7 +11,8 @@ function Accommodation() {
   const { id } = useParams();
   const accommodation = data.find(item => item.id === id);
 
-  if (!accommodation) return <div>Logement introuvable</div>;
+  // Redirection vers la page 404 si le logement n'existe pas
+  if (!accommodation) return <Navigate to="*" />;
 
   return (
     <section className="accommodation-detail">
