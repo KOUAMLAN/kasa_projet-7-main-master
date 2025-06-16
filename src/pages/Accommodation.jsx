@@ -12,7 +12,7 @@ function Accommodation() {
   const accommodation = data.find(item => item.id === id);
 
   // Redirection vers la page 404 si le logement n'existe pas
-  if (!accommodation) return <Navigate to="*" />;
+  if (!accommodation) return <Navigate to="/404" replace />;
 
   return (
     <section className="accommodation-detail">
