@@ -30,8 +30,19 @@ function Accommodation() {
         </div>
         <div className="host-rating">
           <div className="host">
-            <span>{accommodation.host.name}</span>
-            <img src={accommodation.host.picture} alt={accommodation.host.name} />
+            <span>
+              {accommodation.host.firstName && accommodation.host.lastName
+                ? `${accommodation.host.firstName} ${accommodation.host.lastName}`
+                : accommodation.host.name}
+            </span>
+            <img
+              src={accommodation.host.picture}
+              alt={
+                accommodation.host.firstName && accommodation.host.lastName
+                  ? `${accommodation.host.firstName} ${accommodation.host.lastName}`
+                  : accommodation.host.name
+              }
+            />
           </div>
           <Rating rating={parseInt(accommodation.rating, 10)} />
         </div>
