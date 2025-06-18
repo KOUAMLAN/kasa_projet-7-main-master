@@ -9,7 +9,8 @@ function NotFound() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      textAlign: "center"
+      textAlign: "center",
+      fontFamily: "'Montserrat', Arial, sans-serif"  // Ajout ici
     }}>
       <h1 style={{ fontSize: "3rem", color: "#FF6060" }}>404</h1>
       <p style={{ fontSize: "1.5rem", margin: "1rem 0", color: "#FF6060" }}>
