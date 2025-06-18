@@ -18,10 +18,11 @@
 .accommodation-main {
   flex: 1;
 
-  h1 {
+  .accommodation-title {
     font-size: 2rem;
     color: #FF6060;
     margin-bottom: 0.5rem;
+    font-family: 'Montserrat', Arial, sans-serif; // Assure la police
   }
 
   .accommodation-location {
@@ -52,6 +53,7 @@
       font-size: 1rem;
       color: #FF6060;
       margin-bottom: 0.5rem;
+      font-family: 'Montserrat', Arial, sans-serif;
     }
 
     img {

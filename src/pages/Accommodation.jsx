@@ -14,6 +14,12 @@ function Accommodation() {
   // Redirection vers la page 404 si le logement n'existe pas
   if (!accommodation) return <Navigate to="/404" replace />;
 
+  // Extraction du nom et prénom du propriétaire
+  const { host } = accommodation;
+  const hostFullName = host.firstName && host.lastName
+    ? `${host.firstName} ${host.lastName}`
+    : host.name || "";
+
   return (
     <section className="accommodation-detail">
       <Gallery pictures={accommodation.pictures} />
@@ -30,18 +36,10 @@ function Accommodation() {
         </div>
         <div className="host-rating">
           <div className="host">
-            <span>
-              {accommodation.host.firstName && accommodation.host.lastName
-                ? `${accommodation.host.firstName} ${accommodation.host.lastName}`
-                : accommodation.host.name}
-            </span>
+            <span>{hostFullName}</span>
             <img
-              src={accommodation.host.picture}
-              alt={
-                accommodation.host.firstName && accommodation.host.lastName
-                  ? `${accommodation.host.firstName} ${accommodation.host.lastName}`
-                  : accommodation.host.name
-              }
+              src={host.picture}
+              alt={hostFullName}
             />
           </div>
           <Rating rating={parseInt(accommodation.rating, 10)} />
