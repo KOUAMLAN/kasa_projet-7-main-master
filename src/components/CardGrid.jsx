@@ -5,7 +5,7 @@ import styles from "./Card.module.scss";
 
 function CardGrid() {
   return (
-<section className={styles.cardGrid}>
+    <section className={styles.cardGrid}>
       {data.map((accommodation) => (
         <Card key={accommodation.id} accommodation={accommodation} />
       ))}

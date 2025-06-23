@@ -2,4 +2,15 @@ $primary: #FF6060;
 $background: #fff;
 $text: #333;
 $radius: 10px;
+<<<<<<< HEAD
 $star-inactive: #E3E3E3;
+=======
+$star-inactive: #E3E3E3;
+
+:export {
+  primary: $primary;
+  background: $background;
+  text: $text;
+  radius: $radius;
+}
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949

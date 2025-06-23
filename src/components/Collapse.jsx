@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/collapse.scss";
 
-function Collapse({ title, isOpen, onClick, children }) {
+function Collapse({ title, children }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className={`collapse${isOpen ? " open" : ""}`}>
-      <div className="collapse-header" onClick={onClick}>
+      <div
+        className="collapse-header"
+        onClick={() => setIsOpen(!isOpen)}
+        tabIndex={0}
+        role="button"
+        aria-expanded={isOpen}
+        aria-controls={`collapse-content-${title.replace(/\s+/g, "-")}`}
+        onKeyPress={e => {
+          if (e.key === "Enter" || e.key === " ") setIsOpen(!isOpen);
+        }}
+      >
         <span className="collapse-title">{title}</span>
         <span className={`collapse-icon${isOpen ? " rotated" : ""}`}>
           <svg width="24" height="24" viewBox="0 0 24 24">
@@ -13,7 +25,10 @@ function Collapse({ title, isOpen, onClick, children }) {
         </span>
       </div>
       {isOpen && (
-        <div className="collapse-content">
+        <div
+          className="collapse-content"
+          id={`collapse-content-${title.replace(/\s+/g, "-")}`}
+        >
           {children}
         </div>
       )}

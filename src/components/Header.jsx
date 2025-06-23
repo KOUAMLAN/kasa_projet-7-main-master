@@ -1,10 +1,10 @@
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../styles/header.scss";
 
 function Header() {
   return (
     <header className="header">
-      {/* Le logo redirige toujours vers la page d'accueil */}
       <Link to="/">
         <img
           src="/images/_Header.png"
@@ -24,7 +24,7 @@ function Header() {
           to="/about"
           className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}
         >
-          A Propos
+          À propos
         </NavLink>
       </nav>
     </header>

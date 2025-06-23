@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 @use '../styles/variables' as *;
+=======
+@use './variables' as *;
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 
 .rating {
   display: flex;
   align-items: center;
   gap: 0.1rem;
+<<<<<<< HEAD
   font-size: 1.5rem;
 
   .star {
@@ -32,4 +37,12 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+=======
+  font-size: 1.3rem;
+  .star {
+    color: $star-inactive; // gris clair par défaut
+    &.active { color: $primary; } // rose Kasa pour les actives
+  }
+  @media (max-width: 600px) { font-size: 1rem; }
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 }

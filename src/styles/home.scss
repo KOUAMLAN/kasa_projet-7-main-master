@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 @use '../abstracts/variables' as *;
 
+=======
+@use './variables' as *;
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 .home {
   max-width: 1240px;
   margin: 0 auto;
   padding: 2rem 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949

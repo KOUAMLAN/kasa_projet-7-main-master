@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @use '../styles/variables' as *;
+=======
+@use './variables' as *;
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 
 .tag {
   display: inline-block;
@@ -9,7 +13,10 @@
   margin-right: 0.5rem;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
+<<<<<<< HEAD
 }
 *, *::before, *::after {
   box-sizing: border-box;
+=======
+>>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 }
