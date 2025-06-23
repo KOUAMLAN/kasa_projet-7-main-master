@@ -1,0 +1,35 @@
+@use '../styles/variables' as *;
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 1.5rem;
+
+  .star {
+    color: $star-inactive;
+    margin-right: 4px;
+    user-select: none;
+    transition: color 0.2s;
+
+    &.active {
+      color: $primary;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+
+    .star {
+      margin-right: 3px;
+    }
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
