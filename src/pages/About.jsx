@@ -1,5 +1,5 @@
 import TaglineSection from "../components/Tagline";
-import taglineImg from "../assets/imgs/about-tagline.png";
+import aboutTaglineImg from "../assets/imgs/about-tagline.png";
 import Footer from "../components/Footer";
 import Collapsible from "../components/Collapsible";
 
@@ -32,7 +32,7 @@ const About = () => {
     return (
         <>
             <div className="container">
-                <TaglineSection imgSrc={taglineImg} />
+                <TaglineSection imgSrc={aboutTaglineImg} />
                 <section>
                     {data.map((item, index) => (
                         <div className="panelAbout" key={index}>
