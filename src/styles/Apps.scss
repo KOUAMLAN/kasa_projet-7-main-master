@@ -1,4 +1,6 @@
 
+@use "./global" as *;
+
 
 html, body, #root, .app-container {
   height: 100%;

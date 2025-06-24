@@ -1,8 +1,9 @@
-import Header from "../components/Header";
 import TaglineSection from "../components/Tagline";
 import taglineImg from "../assets/imgs/about-tagline.png";
 import Footer from "../components/Footer";
 import Collapsible from "../components/Collapsible";
+
+// PAS de Header ici !
 
 const data = [
     {
@@ -31,13 +32,7 @@ const About = () => {
     return (
         <>
             <div className="container">
-                <Header />
-
-                <TaglineSection
-                    imgSrc={taglineImg}
-              
-                />
-
+                <TaglineSection imgSrc={taglineImg} />
                 <section>
                     {data.map((item, index) => (
                         <div className="panelAbout" key={index}>
@@ -48,8 +43,7 @@ const About = () => {
                     ))}
                 </section>
             </div>
-
-            <Footer></Footer>
+            <Footer />
         </>
     );
 };

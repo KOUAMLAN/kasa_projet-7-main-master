@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import TaglineSection from "../components/Tagline";
 import taglineImg from "../assets/imgs/home-tagline.png";
 import Houses from "../components/Houses";
@@ -11,15 +10,13 @@ function Home() {
     return (
         <>
             <div className="container">
-                <Header />
                 <TaglineSection
                     imgSrc={taglineImg}
                     text="Chez vous, partout et ailleurs"
                 />
-
                 <Houses houses={houseData} />
             </div>
-            <Footer></Footer>
+            <Footer />
         </>
     );
 }

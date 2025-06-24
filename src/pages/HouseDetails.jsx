@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import Header from "../components/Header";
 import styles from "../sass/houseDetails.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +7,6 @@ import {
     faChevronLeft,
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-
 import Collapsible from "../components/Collapsible";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
@@ -35,8 +33,7 @@ const HouseDetails = () => {
     return (
         <>
             <div className="container">
-                <Header />
-
+                {/* <Header /> SUPPRIMÉ */}
                 <div className={styles.housePhotos}>
                     <FontAwesomeIcon
                         icon={faChevronLeft}
@@ -48,24 +45,19 @@ const HouseDetails = () => {
                         src={pictures[currentIndex]}
                         alt={house.title}
                     />
-
                     <span className={styles.imgsNbr}>
                         {`${currentIndex + 1}/${house.pictures.length}`}
                     </span>
-
                     <FontAwesomeIcon
                         icon={faChevronRight}
                         className={styles.icon}
                         onClick={handleRightArrow}
                     />
                 </div>
-
                 <h1 className={styles.title}>{house.title}</h1>
-
                 <div className={styles.box}>
                     <div>
                         <h3 className={styles.subTitle}>{house.location}</h3>
-
                         <div className={styles.tags}>
                             {house.tags.map((element, index) => (
                                 <span key={index} className={styles.tag}>
@@ -74,13 +66,11 @@ const HouseDetails = () => {
                             ))}
                         </div>
                     </div>
-
                     <div className={styles.profileRating}>
                         <Profile
                             picture={house.host.picture}
                             name={house.host.name}
                         />
-
                         <div className={styles.stars}>
                             {[...Array(5)].map((_, index) => (
                                 <FontAwesomeIcon
@@ -96,14 +86,12 @@ const HouseDetails = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className={styles.panel}>
                     <div className={styles.test}>
                         <Collapsible title="Description">
                             <p>{house.description}</p>
                         </Collapsible>
                     </div>
-
                     <div className={styles.test}>
                         <Collapsible title="Équipements">
                             {house.equipments.map((element, index) => (
@@ -115,8 +103,7 @@ const HouseDetails = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer></Footer>
+            <Footer />
         </>
     );
 };
