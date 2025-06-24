@@ -1,0 +1,16 @@
+@import "./global.scss";
+
+footer {
+    background-color: $black-color;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $white-color;
+	margin-top: 50px;
+}
+
+footer p {
+	margin-top: 30px;
+}

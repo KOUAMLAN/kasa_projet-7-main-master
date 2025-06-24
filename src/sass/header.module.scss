@@ -1,0 +1,43 @@
+@import "./global";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.logo img {
+    width: 140px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 100px;
+    }
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+.nav li a {
+    font-size: 24px;
+    color: $black-color;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    text-decoration: underline;
+}
+
+.nav li a.activeLink {
+    color: $primary-color;
+    text-decoration: underline;
+}

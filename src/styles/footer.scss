@@ -7,10 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
-
-=======
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
   .footer-logo {
     width: 180px;
     max-width: 90vw;
@@ -24,19 +20,12 @@
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
   @media (max-width: 900px) {
     padding: 2rem 0 1.2rem 0;
     .footer-logo { width: 120px; }
     p { font-size: 1rem; }
   }
-<<<<<<< HEAD
 }
- *::before, *::after {
+*, *::before, *::after {
   box-sizing: border-box;
-=======
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 }

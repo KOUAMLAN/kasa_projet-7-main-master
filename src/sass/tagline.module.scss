@@ -1,0 +1,45 @@
+@import "./global";
+
+.taglineSection {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .taglineImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .tagline {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        z-index: 1;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $gradient-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .taglineSection {
+        height: 130px;
+
+        h1 {
+            font-size: 27px;
+        }
+    }
+}

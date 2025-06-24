@@ -23,7 +23,7 @@ function Gallery({ pictures }) {
           <button className="gallery-arrow gallery-prev" onClick={prev} aria-label="Précédent">
             <svg width="30" height="30" viewBox="0 0 24 24">
               <path d="M15 18l-6-6 6-6"
-                stroke="#FF6060"
+                stroke="#fff"
                 strokeWidth="2"
                 fill="none"
                 strokeLinecap="round"
@@ -34,7 +34,7 @@ function Gallery({ pictures }) {
           <button className="gallery-arrow gallery-next" onClick={next} aria-label="Suivant">
             <svg width="30" height="30" viewBox="0 0 24 24">
               <path d="M9 6l6 6-6 6"
-                stroke="#FF6060"
+                stroke="#fff"
                 strokeWidth="2"
                 fill="none"
                 strokeLinecap="round"

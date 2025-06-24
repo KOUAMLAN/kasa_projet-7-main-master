@@ -9,6 +9,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    height: 140px;
+    border-radius: 15px;
+    margin: 24px auto 32px auto;
+  }
+  @media (max-width: 600px) {
+    height: 90px;
+    border-radius: 8px;
+    margin: 12px auto 20px auto;
+  }
 }
 
 .banner-image {
@@ -18,6 +29,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  pointer-events: none; // évite de bloquer les clics sur le texte
 }
 
 .banner-overlay {
@@ -25,7 +37,7 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
   z-index: 2;
-  border-radius: 25px;
+  border-radius: inherit; // hérite du radius du parent
 }
 
 .banner-text {
@@ -39,34 +51,27 @@
   width: 100%;
   padding: 0 2rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-}
 
-@media (max-width: 1024px) {
-  .banner {
-    height: 140px;
-    border-radius: 15px;
-    margin: 24px auto 32px auto;
-  }
-  .banner-text {
+  @media (max-width: 1024px) {
     font-size: 1.5rem;
     padding: 0 1rem;
   }
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
   .banner-overlay {
     border-radius: 15px;
   }
 }
-
 @media (max-width: 600px) {
-  .banner {
-    height: 90px;
-    border-radius: 8px;
-    margin: 12px auto 20px auto;
-  }
-  .banner-text {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
   .banner-overlay {
     border-radius: 8px;
   }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }

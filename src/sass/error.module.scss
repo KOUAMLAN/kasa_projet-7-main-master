@@ -1,0 +1,34 @@
+@import "../sass/global.scss";
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 64vh;
+    text-align: center;
+    color: #333;
+
+    h1 {
+        font-size: 100px;
+
+        color: $primary-color;
+    }
+
+    p {
+        font-size: 22px;
+        margin-top: 20px;
+        color: $primary-color;
+    }
+
+    a {
+        font-size: 1.2rem;
+        color: $black-color;
+        text-decoration: none;
+        margin-top: 70px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

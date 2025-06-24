@@ -1,23 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Card.module.scss";
+import "../styles/card.scss";
 
 function Card({ accommodation }) {
   return (
-    <Link to={`/accommodation/${accommodation.id}`} className={styles.card}>
-      <div className={styles.cardImgContainer}>
-        <img
-          src={accommodation.cover}
-          alt={accommodation.title}
-          className={styles.cardImg}
-        />
-        <div className={styles.cardOverlay}></div>
-        <div className={styles.cardTitleOverlay}>
-          {accommodation.title}
-        </div>
+    <Link to={`/accommodation/${accommodation.id}`} className="card">
+      <div className="card-img-container">
+        <img src={accommodation.cover} alt={accommodation.title} className="card-img" />
+        <div className="card-overlay"></div>
+        <div className="card-title-overlay">{accommodation.title}</div>
       </div>
     </Link>
   );
 }
-
 export default Card;

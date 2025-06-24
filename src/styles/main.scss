@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 // ==== IMPORTS ====
 @use './variables' as *;
-=======
-// src/styles/main.scss
-
-@use './abstracts/variables' as *;
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 @use './layout/header';
 @use './layout/footer';
 @use './components/card';
 @use './pages/home';
 @use './pages/about';
-<<<<<<< HEAD
 
 // ==== RESET GLOBAL ====
 *, *::before, *::after {
@@ -83,36 +76,3 @@ p, h1, h2, h3, h4, h5, h6 {
 
 // ==== DEBUG VISUEL ====
 // * { outline: 1px solid red; }
-=======
-// Ajoute d'autres imports selon tes besoins
-
-// RESET & BODY
-html, body, #root {
-  font-family: 'Montserrat', Arial, sans-serif;
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
-body {
-  background-color: $background;
-  color: $text;
-  margin: 0;
-}
-
-// Ciblage mobile
-@media (max-width: 600px) {
-  .banner,
-  .gallery,
-  .card,
-  .accommodation-detail,
-  .about,
-  .card-grid,
-  .accommodation-collapses {
-    width: 100%;
-    max-width: 100vw;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    overflow-x: hidden !important;
-  }
-}
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949

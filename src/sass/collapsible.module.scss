@@ -1,0 +1,53 @@
+@import "../sass/global.scss";
+
+.panel {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    // width: 100%;
+}
+
+@media (max-width: 768px) {
+    .panel {
+        width: 100%;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panelHeader {
+    background-color: $primary-color;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.panelHeader h2 {
+    margin: 0;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.panelContent {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+section p {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.714);
+    line-height: 1.4;
+    letter-spacing: 1.05;
+}

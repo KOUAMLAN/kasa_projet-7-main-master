@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-@use '../styles/variables' as *;
-
-.collapse {
-  margin-bottom: 20px;
-  border-radius: 5px;
-  // PAS de background ici !
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-
-  // Seul le Collapse ouvert a un fond
-  &.open {
-    background: #f7f7f7; // ou la couleur que tu veux pour le Collapse ouvert
-  }
-
-=======
 @use './variables' as *;
+
 .collapse {
   margin-bottom: 20px;
   border-radius: 5px;
   background: #f7f7f7;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
+  width: 100%;
+  overflow: hidden;
+
   .collapse-header {
     display: flex;
     justify-content: space-between;
@@ -28,57 +16,28 @@
     font-weight: 700;
     font-size: 18px;
     color: #fff;
-<<<<<<< HEAD
-    background: $primary;
-=======
     background: #FF6060;
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
     transition: background 0.2s;
   }
-<<<<<<< HEAD
-
-  .collapse-title {
-    flex: 1;
-  }
-
-=======
   .collapse-title { flex: 1; }
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
   .collapse-icon {
     transition: transform 0.3s;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-
-    &.rotated {
-      transform: rotate(180deg);
-    }
-  }
-
-  .collapse-content {
-    padding: 20px 24px;
-    background: transparent; // PAS de fond par défaut
-=======
     &.rotated { transform: rotate(180deg); }
     svg { display: block; }
   }
   .collapse-content {
     padding: 20px 24px;
     background: #f7f7f7;
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
     color: #333;
     font-size: 16px;
     border-radius: 0 0 5px 5px;
     line-height: 1.6;
     animation: fadeIn 0.2s;
-  }
-<<<<<<< HEAD
-
-  &.open .collapse-content {
-    background: #f7f7f7; // Fond SEULEMENT si ouvert
   }
 }
 
@@ -88,16 +47,6 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px);}
+  from { opacity: 0; transform: translateY(-10px);}
   to { opacity: 1; transform: translateY(0);}
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-=======
-}
-@media (max-width: 600px) {
-  .collapse .collapse-header { font-size: 1rem; padding: 0.7rem; }
-  .collapse .collapse-content { padding: 0.7rem; }   
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
 }

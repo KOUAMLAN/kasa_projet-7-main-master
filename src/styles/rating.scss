@@ -1,48 +1,18 @@
-<<<<<<< HEAD
-@use '../styles/variables' as *;
-=======
-@use './variables' as *;
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
-
 .rating {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
-<<<<<<< HEAD
-  font-size: 1.5rem;
-
-  .star {
-    color: $star-inactive;
-    margin-right: 4px;
-    user-select: none;
-    transition: color 0.2s;
-
-    &.active {
-      color: $primary;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  @media (max-width: 600px) {
-    font-size: 1.2rem;
-
-    .star {
-      margin-right: 3px;
-    }
-  }
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-=======
-  font-size: 1.3rem;
-  .star {
-    color: $star-inactive; // gris clair par défaut
-    &.active { color: $primary; } // rose Kasa pour les actives
-  }
-  @media (max-width: 600px) { font-size: 1rem; }
->>>>>>> 069167fab8c3c5c7255dfa778312a27b0ce27949
+.star {
+  font-size: 1.5rem;
+  color: #e3e3e3;
+  margin-right: 4px;
+  user-select: none;
+  transition: color 0.2s;
+}
+.star:last-child { margin-right: 0; }
+.star.active { color: #FF6060; }
+
+@media (max-width: 600px) {
+  .star { font-size: 1.2rem; margin-right: 3px; }
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Banner.module.scss";
+import "../styles/banner.scss";
 
 function Banner({ image, altText, text }) {
   return (
-    <div className={styles.banner}>
-      <img src={image} alt={altText} className={styles.bannerImage} />
-      <div className={styles.bannerOverlay}></div>
-      {text && <h1 className={styles.bannerText}>{text}</h1>}
+    <div className="banner">
+      <img src={image} alt={altText} className="banner-image" />
+      <div className="banner-overlay"></div>
+      {text && <h1 className="banner-text">{text}</h1>}
     </div>
   );
 }
